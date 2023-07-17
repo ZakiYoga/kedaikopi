@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('category_id');
+            $table->string('slug');
             $table->text('description');
             $table->enum('type_menu', ['Food', 'Drink']);
             $table->double('price');

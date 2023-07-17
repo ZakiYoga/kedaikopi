@@ -29,7 +29,7 @@
         <div class="container-menus">
             <div class="menu-item">
                 <h3>Menu 1</h3>
-                <img src=".assets/img/hero-img-1.jpg" alt="Menu 1">
+                <img src="assets/img/hero-img-1.jpg" alt="Menu 1">
                 <button>Order</button>
             </div>
             <div class="menu-item">

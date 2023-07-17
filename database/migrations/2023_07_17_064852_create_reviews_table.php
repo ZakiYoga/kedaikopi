@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->foreignId('user_id');
-            $table->string('name_item');
+            $table->foreignId('menu_id');
             $table->text('comment');
-            $table->enum('review', ['Buruk', 'Cukup', 'Baik', 'Sangat Baik']);
+            $table->enum('ratting', ['Buruk', 'Cukup', 'Baik', 'Sangat Baik']);
             $table->timestamp('comment_at')->nullable();
             $table->timestamps();
         });
