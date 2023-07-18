@@ -29,17 +29,17 @@
         <div class="container-menus">
             <div class="menu-item">
                 <h3>Menu 1</h3>
-                <img src="assets/img/hero-img-1.jpg" alt="Menu 1">
+                <img src="assets/img/img-1.jpg" alt="Menu 1">
                 <button>Order</button>
             </div>
             <div class="menu-item">
                 <h3>Menu 2</h3>
-                <img src="assets/img/hero-img-2.jpg" alt="Menu 2">
+                <img src="assets/img/img-2.jpg" alt="Menu 2">
                 <button>Order</button>
             </div>
             <div class="menu-item">
                 <h3>Menu 3</h3>
-                <img src="assets/img/hero-img-3.jpg" alt="Menu 3">
+                <img src="assets/img/img-3.jpg" alt="Menu 3">
                 <button>Order</button>
             </div>
         </div>
