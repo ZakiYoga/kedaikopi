@@ -1,5 +1,5 @@
 <header>
-    <div class="logo-navbar">Roast 'N Roll</div>
+    <div class="logo-navbar"><img src="assets/img/logo.png" alt="logo" srcset="" /> Roast 'N Roll</div>
     <div class="navbar">
         <ul>
             <li>

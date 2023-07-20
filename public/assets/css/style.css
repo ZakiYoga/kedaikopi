@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap&family=Galada&family=Lato:wght@300&family=Roboto&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap&family=Galada&family=Open+Sans:wght@300&family=Lato:wght@300&family=Roboto&family=Rock+Salt&display=swap');
 
 :root {
     --primary-color: #532E1C;
@@ -12,6 +12,10 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* 
@@ -95,7 +99,8 @@ header.scrolled {
     justify-content: space-between;
     width: 100%;
     height: 100vh;
-    background-image: url("../img/top-view-coffee-with-beans-table.jpg");
+    background-color: #1e1e1e;
+    background-image: url('../img/background.png');
     background-position: bottom;
     background-size: cover;
     align-items: center;
@@ -115,7 +120,7 @@ header.scrolled {
     padding-left: 10px;
     font-family: 'Rock Salt', cursive;
     font-size: 3rem;
-    color: var(--white);
+    color: #fff;
 }
 
 .hero-content p {
@@ -193,13 +198,13 @@ header.scrolled {
     gap: 20px;
 }
 
-.title-menu p {
+.title-menu h2 {
     font-family: 'Cinzel Decorative', cursive;
+    color: #532E1C;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    color: var(--white);
 }
 
 .menu-item {
@@ -233,21 +238,22 @@ header.scrolled {
 .container-about {
     height: 100vh;
     width: 100%;
-    padding: 30px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
 .about-img {
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
 .about-img img {
-    width: 600px;
+    align-items: center;
+    width: 400px;
 }
 
 .about-content {
@@ -270,11 +276,190 @@ header.scrolled {
 
 .about-content button {
     font-size: 1.5rem;
-    margin-top: 20px;
-    padding: 18px;
-    width: 20%;
+    padding: 12px 14px;
+    width: 200px;
     border: none;
     border-radius: 4px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+.container-faq {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.faq {
+    width: 30%;
+}
+
+.faq h1,
+h6 {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.faq h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.faq h6 {
+    font-size: 1.5rem;
+}
+
+.faq p {
+    margin-top: 10px;
+}
+
+.questions-faq {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.questions-faq button {
+    border: none;
+    color: var(--white);
+    background-color: #532E1C;
+    padding: 11px 7px;
+    width: 100%;
+    text-align: left;
+    height: 35px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.questions-faq button #quest-icon {
+    position: absolute;
+    right: 10px;
+}
+
+.answer {
+    background-color: #C5A880;
+    color: #0F0F0F;
+    padding: 11px 7px;
+    height: auto;
+    margin-top: 0;
+}
+
+.footer-container {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #242424;
+    color: #fff;
+}
+
+.about {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.about img {
+    height: 100%;
+    max-width: 33px;
+    max-height: 33px;
+}
+
+.about h3 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.about p {
+    font-family: 'Open Sans', sans-serif;
+    flex-basis: 100%;
+}
+
+
+.footer-menus {
+    font-family: 'Lato';
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding-right: 40px;
+}
+
+.quick-links {
+    padding-left: 5px;
+}
+
+.quick-links h3,
+.contact-us h3 {
+    margin-bottom: 10px;
+}
+
+.quick-links ul li,
+.contact-us ul li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.quick-links ul li a,
+.contact-us ul li a,
+.container-icon a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#icon-link {
+    margin-right: 5px;
+}
+
+.quick-links ul li a:hover,
+.contact-us ul li a:hover {
+    color: #bababa;
+}
+
+.quick-links ul,
+.contact-us ul {
+    list-style: none;
+}
+
+.social-media h3 {
+    margin-bottom: 10px;
+}
+
+.container-icon {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+.container-icon a {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.container-icon a #social-media {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+    color: white;
+    height: 8vh;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: #C5A880;
 }
