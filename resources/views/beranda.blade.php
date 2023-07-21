@@ -14,7 +14,7 @@
     
     <body>
         @include('partials.navbar')
-    <main>
+    <main id="mainContent">
         <div class="container-main">
             <div class="hero-content">
                 <h2>Roast 'n Roll</h2>
@@ -93,6 +93,7 @@
             </div>
         </div>
             <div class="footer-container">
+                <div class="footer">
                 <div class="about">
                     <img src="assets/img/logo.png" alt="logo" srcset="" /><h3>Roast 'n Roll</h3>
                     <p>Roast and Roll adalah sebuah kedai kopi yang menawarkan kopi berkualitas tinggi dan roti yang lezat. Kami menawarkan berbagai macam kopi berkualitas dan beragam pilihan roti yang menggugah selera.</p>
@@ -134,6 +135,7 @@
                     </div>
                 </div>
             </div>
+            </div>
             <div class="copyright">
                 <p>Copyright &copy; 2023 <a href="/">Roast 'n Roll</a>. All rights reserved</p>
             </div>
@@ -144,6 +146,6 @@
     </footer>
 </body>
 
-<script src="./assets/js/script.js"></script>
+<script type="module" src="./assets/js/index.js"></script>
 
 </html>

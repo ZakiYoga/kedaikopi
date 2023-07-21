@@ -1,5 +1,39 @@
-@media screen and (max-width: 768) {
-    .hero-content h2 {
+@media screen and (max-width: 768px) {
+    .app-bar {
+        grid-template-columns: auto 1fr auto;
+        gap: 10px;
+        position: sticky;
+        top: 0;
+        display: grid;
+        background-color: #1d1d1d;
+        color: #C5A880;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .app-bar .navbar {
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        transition: all 0.3s;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .app-bar .navbar ul li {
+        display: inline-block;
+    }
+
+    .app-bar .navbar ul li a {
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .app-bar .logo-navbar {
         font-size: 1rem;
     }
 
