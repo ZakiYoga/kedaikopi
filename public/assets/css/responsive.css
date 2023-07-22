@@ -1,25 +1,23 @@
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .app-bar {
         grid-template-columns: auto 1fr auto;
-        gap: 10px;
-        position: sticky;
-        top: 0;
-        display: grid;
-        background-color: #1d1d1d;
-        color: #C5A880;
+        padding: 8px 32px;
     }
 
-    .hamburger {
-        display: inline-block;
+    .app-bar .hamburger {
+        display: none;
+    }
+
+    .app-bar .logo-navbar {
+        font-size: 1rem;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .app-bar .navbar {
-        position: absolute;
-        top: 50px;
-        left: -100%;
-        transition: all 0.3s;
-        overflow: hidden;
+        position: static;
         width: 100%;
+        background-color: #532E1C;
     }
 
     .app-bar .navbar ul li {
@@ -32,9 +30,17 @@
         text-align: center;
         margin: 0;
     }
+}
 
-    .app-bar .logo-navbar {
-        font-size: 1rem;
+@media screen and (min-width: 769px) {
+
+    .app-bar .navbar {
+        display: flex;
+        justify-content: space-around;
     }
 
+    .menu-navbar,
+    .btn-navbar {
+        display: inline-block;
+    }
 }

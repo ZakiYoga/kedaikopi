@@ -26,12 +26,14 @@ body {
 .app-bar {
     width: 100%;
     height: 8vh;
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    position: fixed;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    gap: 10px;
+    position: sticky;
+    top: 0;
     z-index: 999;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .app-bar.transparent {
@@ -43,13 +45,12 @@ body {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-.hamburger {
+.app-bar .hamburger {
     display: flex;
     align-items: center;
-    display: none;
 }
 
-.hamburger button {
+.app-bar .hamburger button {
     background-color: #532E1C;
     border: none;
     border-radius: 4px;
@@ -58,11 +59,7 @@ body {
     color: #C5A880;
 }
 
-.app-bar .navbar.open {
-    left: 0;
-}
-
-.logo-navbar {
+.app-bar .logo-navbar {
     margin-left: 40px;
     font-weight: 700;
     color: var(--secondary-color);
@@ -75,37 +72,52 @@ body {
     font-family: 'Cinzel Decorative', cursive;
 }
 
-.logo-navbar img {
+.app-bar .logo-navbar img {
     margin-right: 10px;
     padding: 5px;
     max-width: 30px;
 }
 
-.navbar {
+.app-bar .navbar {
+    position: absolute;
+    top: 8vh;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    left: -100%;
+    display: inline-block;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s;
+    row-gap: 10px;
 }
 
-.navbar ul li {
+.app-bar .navbar.open {
+    left: 0;
+    background-color: #532E1C;
+}
+
+.app-bar .navbar ul li {
     margin: 0px 10px;
     list-style: none;
 }
 
-
-.navbar ul li a {
+.app-bar .navbar ul li a {
     display: inline-block;
-    width: 100%;
     text-decoration: none;
     color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
     font-size: large;
+    padding: 8px;
+    margin-bottom: 5px;
 }
 
 .menu-navbar,
 .btn-navbar {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.btn-navbar {
+    justify-content: space-evenly;
 }
 
 .btn-navbar .signup,
