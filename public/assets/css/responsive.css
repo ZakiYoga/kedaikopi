@@ -35,21 +35,21 @@
 
     .app-bar {
         display: flex;
-        justify-content: space-between;
-        gap: 5px;
+        justify-content: space-around;
+        gap: 15px;
+        background-color: transparent;
         padding: 0;
     }
 
     .app-bar .navbar {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: row;
         background-color: transparent;
     }
 
     .app-bar .logo-navbar {
-        margin-left: 0;
         width: 25%;
     }
 
@@ -60,5 +60,35 @@
 
     .menu-navbar {
         padding: 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 22px;
+    }
+
+    .hero-content button {
+        font-size: 18px;
+    }
+
+    .about-img img {
+        width: 400px;
+    }
+
+    .about-content h2,
+    .title-menu h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content p {
+        font-size: 22px;
+    }
+
+    .about-content button {
+        padding: 10px 9px;
+        width: 140px;
     }
 }

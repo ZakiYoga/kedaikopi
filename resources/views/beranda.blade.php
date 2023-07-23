@@ -63,6 +63,11 @@
                         <img src="assets/img/img-3.jpg" alt="Menu 3">
                         <button>Order</button>
                     </div>
+                    <div class="menu-item">
+                        <h3>Menu 4</h3>
+                        <img src="assets/img/img-3.jpg" alt="Menu 3">
+                        <button>Order</button>
+                    </div>
                 </div>
             </div>
         <div class="container-faq">

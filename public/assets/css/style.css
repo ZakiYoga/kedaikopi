@@ -32,7 +32,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    background-color: transparent;
+    background-color: rgba(42, 42, 42, 0.753);
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -94,7 +94,7 @@ body {
     position: absolute;
     top: 8vh;
     width: auto;
-    top: -400%;
+    top: -500%;
     display: inline-block;
     align-items: center;
     overflow: hidden;
@@ -159,11 +159,8 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 100vh;
-    background-color: #1e1e1e;
+    height: 110vh;
     background-image: url('../img/background.png');
-    background-position: bottom;
-    background-size: cover;
     align-items: center;
 }
 
@@ -173,7 +170,6 @@ body {
     flex-direction: column;
     display: flex;
     justify-content: center;
-    align-items: right;
     width: 40%;
 }
 
@@ -253,10 +249,13 @@ body {
 .container-menus {
     width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    align-items: flex-start;
     gap: 20px;
+    overflow: hidden;
 }
 
 .title-menu h2 {
@@ -265,19 +264,17 @@ body {
     font-size: 3rem;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .menu-item {
     background-color: var(--secondary-color);
-    width: 300px;
+    width: 200px;
     height: auto;
-    border: 1px solid #ccc;
     padding: 10px;
-    margin: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin: 0 8px;
 }
 
 .menu-item img {
