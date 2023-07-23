@@ -4,6 +4,7 @@ const app = new App({
     button: document.querySelector('#hamburgerButton'),
     drawer: document.querySelector('#navDrawer'),
     content: document.querySelector('#mainContent'),
+    close: document.querySelector('#close'),
 })
 
 

@@ -24,8 +24,7 @@ body {
 } */
 
 .app-bar {
-    width: 100%;
-    height: 8vh;
+    height: 10vh;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -33,6 +32,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
+    background-color: transparent;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -45,15 +45,28 @@ body {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+#close {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .app-bar .hamburger {
     display: flex;
     align-items: center;
+    margin-left: 15px;
 }
 
-.app-bar .hamburger button {
+.btn-close {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.app-bar .hamburger button,
+.btn-close button {
     background-color: #532E1C;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     font-size: 1.5rem;
     padding: 5px 8px;
     color: #C5A880;
@@ -66,7 +79,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--white);
     font-family: 'Lato';
     font-size: 1.5rem;
     font-family: 'Cinzel Decorative', cursive;
@@ -81,22 +93,28 @@ body {
 .app-bar .navbar {
     position: absolute;
     top: 8vh;
-    width: 100%;
-    left: -100%;
+    width: auto;
+    top: -400%;
     display: inline-block;
     align-items: center;
     overflow: hidden;
     transition: all 0.3s;
     row-gap: 10px;
+    background-color: transparent;
 }
 
 .app-bar .navbar.open {
-    left: 0;
+    top: 0;
     background-color: #532E1C;
+    width: 100%;
+    height: auto;
+}
+
+.app-bar .navbar.open ul li {
+    padding: 14px 8px;
 }
 
 .app-bar .navbar ul li {
-    margin: 0px 10px;
     list-style: none;
 }
 
@@ -106,14 +124,18 @@ body {
     color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
     font-size: large;
-    padding: 8px;
-    margin-bottom: 5px;
+    padding: 4px;
 }
 
 .menu-navbar,
 .btn-navbar {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+}
+
+.menu-navbar {
+    background-color: transparent;
 }
 
 .btn-navbar {
@@ -133,7 +155,7 @@ body {
 
 
 .container-main {
-    padding-top: 8vh;
+    margin-top: -14vh;
     display: flex;
     justify-content: space-between;
     width: 100%;
