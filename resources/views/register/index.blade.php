@@ -10,15 +10,15 @@
             <input type="text" name="name" class="form-control rounded-top" id="name" placeholder="Name">
             <label for="name">Name</label>
         </div>
-            <div class="form-floating">
+        <div class="form-floating">
             <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
             <label for="email">Email address</label>
-          </div>
-          <div class="form-floating">
+        </div>
+        <div class="form-floating">
             <input type="password" name="password" class="form-control rounded-bottom" id="password" placeholder="Password">
             <label for="password">Password</label>
-          </div>
-          <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Register</button>
+        </div>
+        <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Register</button>
         </form>
         <small class="d-block text-center mt-3">Already registered? <a href="/login">Login</a></small>
     </main>
