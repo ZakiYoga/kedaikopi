@@ -1,0 +1,19 @@
+{
+    "faq": [{
+            "pertanyaan": "Hari dan Jam berapa Roast 'n Roll buka?",
+            "jawaban": "Roast 'n Roll buka setiap hari dari Senin hingga Minggu, pukul 08.00 pagi hingga 10.00 malam."
+        },
+        {
+            "pertanyaan": "Apa Jenis kopi yang ditawarkan oleh Roast 'n Roll?",
+            "jawaban": "Roast 'n Roll menawarkan beragam jenis kopi, seperti Espresso, Americano, Latte, Cappuccino, Mocha, dan masih banyak lagi."
+        },
+        {
+            "pertanyaan": "Bagaimana cara memesan kopi atau roti dari Roast 'n Roll?",
+            "jawaban": "Anda dapat memesan kopi atau roti dari Roast 'n Roll dengan dua cara: 1. Mengunjungi toko fisik kami dan memesan langsung di sana. 2. Menghubungi nomor layanan pelanggan kami untuk pemesanan pengantaran."
+        },
+        {
+            "pertanyaan": "Apakah Roast 'n Roll menyediakan layanan pengantaran?",
+            "jawaban": "Ya, Roast 'n Roll menyediakan layanan pengantaran. Anda dapat memesan kopi atau roti melalui telepon dan kami akan mengantarkannya ke alamat yang Anda berikan."
+        }
+    ]
+}

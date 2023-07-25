@@ -78,24 +78,31 @@
                 <p>Temukan Jawaban untuk Pertanyaan Umum Anda</p>
             </div>
             <div class="questions-faq">
-                <div class="questions1">                    
-                    <button id="pertanyaan1">Hari dan Jam berapa Roast 'n Roll buka? <i id="quest-icon" class="fa-solid fa-caret-down"></i></button>
+                <div class="questions1">
+                  <button id="pertanyaan1">Hari dan Jam berapa Roast 'n Roll buka? <i id="quest-icon1" class="fa-solid fa-caret-down"></i></button>
+                  <div class="answer1" style="display: none;">
+                    <p><i class="fa-solid fa-angle-right"></i> "Roast 'n Roll buka setiap hari dari Senin hingga Minggu, pukul 08.00 pagi hingga 10.00 malam."</p>
+                  </div>
                 </div>
-                <div class="questions2">                    
-                    <button id="pertanyaan2">Apa Jenis kopi yang ditawarkan oleh roast 'n Roll? <i id="quest-icon" class="fa-solid fa-caret-down"></i></button>
+                <div class="questions2">
+                  <button id="pertanyaan2">Apa Jenis kopi yang ditawarkan oleh Roast 'n Roll? <i id="quest-icon2" class="fa-solid fa-caret-down"></i></button>
+                  <div class="answer2" style="display: none;">
+                    <p><i class="fa-solid fa-angle-right"></i> "Roast 'n Roll menawarkan beragam jenis kopi, seperti Espresso, Americano, Latte, Cappuccino, Mocha, dan masih banyak lagi."</p>
+                  </div>
                 </div>
-                <div class="questions3">                    
-                    <button id="pertanyaan3">Bagaimana cara memesan kopi atau roti dari Roast 'n Roll? <i id="quest-icon" class="fa-solid fa-caret-down"></i></button>
+                <div class="questions3">
+                  <button id="pertanyaan3">Bagaimana cara memesan kopi atau roti dari Roast 'n Roll? <i id="quest-icon3" class="fa-solid fa-caret-down"></i></button>
+                  <div class="answer3" style="display: none;">
+                    <p><i class="fa-solid fa-angle-right"></i> "Anda dapat memesan kopi atau roti dari Roast 'n Roll dengan dua cara: 1. Mengunjungi toko fisik kami dan memesan langsung di sana. 2. Menghubungi nomor layanan pelanggan kami untuk pemesanan pengantaran."</p>
+                  </div>
                 </div>
-                <div class="questions4">                    
-                    <button id="pertanyaan4">Apakah Roast 'n Roll menyediakan layanan pengantaran? <i id="quest-icon" class="fa-solid fa-caret-down"></i></button>
+                <div class="questions4">
+                  <button id="pertanyaan4">Apakah Roast 'n Roll menyediakan layanan pengantaran? <i id="quest-icon4" class="fa-solid fa-caret-down"></i></button>
+                  <div class="answer4" style="display: none;">
+                    <p><i class="fa-solid fa-angle-right"></i> "Ya, Roast 'n Roll menyediakan layanan pengantaran. Anda dapat memesan kopi atau roti melalui telepon dan kami akan mengantarkannya ke alamat yang Anda berikan."</p>
+                  </div>
                 </div>
-                <div class="answer">
-                    <p><i class="fa-solid fa-angle-right"></i> Roast and Roll buka setiap hari mulai pukul 07.00 pagi hingga 
-                        21.00 malam.</p>
-                    </div>
-                </div>
-            </div>
+              </div>
         </div>
             <div class="footer-container">
                 <div class="footer">

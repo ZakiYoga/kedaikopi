@@ -420,7 +420,10 @@ h6 {
     right: 10px;
 }
 
-.answer {
+.answer1,
+.answer2,
+.answer3,
+.answer4 {
     background-color: #C5A880;
     color: #0F0F0F;
     padding: 11px 7px;
