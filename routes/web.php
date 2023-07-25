@@ -1,4 +1,5 @@
 <?php
+use App\Models\Category;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -37,4 +38,6 @@ Route::get('/dashboard-admin', function () {
 }); 
 
 Route::get('/login', [LoginController::class, 'index']);
+
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
