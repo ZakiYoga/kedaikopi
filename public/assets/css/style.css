@@ -197,10 +197,28 @@ body {
 }
 
 .hero-content h2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding-left: 10px;
     font-family: 'Rock Salt', cursive;
     font-size: 3rem;
     color: #fff;
+}
+
+.letter {
+    transition: 0.4s;
+    transform: translateX(0);
+    cursor: grab;
+    color: #ffffff;
+    padding: 2px 2px;
+}
+
+.letter:hover {
+    transform: translateY(-1rem);
+    background: -webkit-linear-gradient(120deg, #c5a880, #a07654);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
