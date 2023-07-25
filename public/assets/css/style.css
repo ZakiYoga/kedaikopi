@@ -550,3 +550,15 @@ h6 {
     text-decoration: none;
     color: #C5A880;
 }
+
+.carousel-inner {
+    max-height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
