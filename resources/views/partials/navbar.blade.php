@@ -22,18 +22,24 @@
         </ul>
         <ul class="btn-navbar">
             @auth
-                <li class="dropdown-toggle">
-                    <!-- Ganti 'Nama User' dengan nama pengguna yang sesuai setelah login -->
-                    Welcome Back, {{ auth()->user()->name }} <i class="fa-solid fa-caret-down"></i>
-                    <div class="dropdown-menu">
-                        <!-- Tambahkan menu-item untuk dashboard dan logout -->
-                        <a href="/dashboard">Dashboard</a>
-                        <a href="/logout">Logout</a>
-                    </div>
-                </li>
+            <li class="nav-item dropdown-toggle">
+                Welcome back, {{ auth()->user()->name }}
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/dashboard">My Dashboard</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <form action="/logout" method="post" class="dropdown-item">
+                            @csrf
+                            <button type="submit" id="logout">Logout</button>
+                        </form>
+                </ul>
+            </li>
             @else
-                <li><a class="login" href="/login">Login</a></li>
+            <li class="nav-item">
+                <a class="login" href="/login">Login</a>
+            </li>
             @endauth
         </ul>
     </div>
 </header>
+
