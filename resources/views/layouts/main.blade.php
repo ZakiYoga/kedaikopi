@@ -7,6 +7,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>RnR | {{ $title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon-->
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -50,7 +53,12 @@
                                     <a class="dropdown-item" href="#!">Halo, ...</a>
                                     <a class="dropdown-item" href="#!">My Order</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#!">Logout</a>
+                                    <form action="/logout" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">
+                                            Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </li>
                         </ul>
