@@ -9,6 +9,6 @@ class DashboardController extends Controller
     public function index(){
         return view('dashboard-admin.index', [
             "title" => "Dashboard Admin"
-        ]);
+        ]); 
     }
-}
+} 

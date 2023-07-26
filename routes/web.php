@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\DashboardMenuController;
 use App\Models\Category;
 
 use App\Models\Menu;
@@ -68,3 +69,6 @@ Route::get('/categories', function(){
 });
 
 Route::get('/dashboard-admin', [DashboardController::class, 'index']);
+
+Route::resource('/dashboard/admin', DashboardMenuController::class);
+// ->middleware('auth')

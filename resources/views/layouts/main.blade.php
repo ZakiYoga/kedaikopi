@@ -20,19 +20,7 @@
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
-        <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">Roast 'n Roll</div>
-            <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ $title === 'Dashboard' ? 'active' : '' }}"
-                    href="/dashboard">Dashboard</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ $title === 'Menu' ? 'active' : '' }}"
-                    href="/menus">Menu</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ $title === 'Order' ? 'active' : '' }}"
-                    href="/order">Order</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ $title === 'About' ? 'active' : '' }}"
-                    href="/about">About</a>
-            </div>
-        </div>
+        @include('layouts.sidebar')
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
@@ -51,7 +39,7 @@
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MyProfile</a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Halo, {{ auth()->user()->name }}</a>
+                                    <a class="dropdown-item" href="#!">Halo,</a>
                                     <a class="dropdown-item" href="#!">My Order</a>
                                     <div class="dropdown-divider"></div>
                                     <form action="/logout" method="post">
