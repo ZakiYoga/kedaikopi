@@ -11,6 +11,7 @@
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="./assets/css/styles-main.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>

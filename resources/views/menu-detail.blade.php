@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('container')
+    <h2>Menu Foods And Beverages</h2>
+
     <h3>{{ $menu->name }}</h3>
     <p>{{ $menu->description }}</p>
 

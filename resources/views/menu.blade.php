@@ -1,14 +1,24 @@
 @extends('layouts.main')
 
 @section('container')
-    <h2>Menu Foods And Beverages</h2>
+    <h2 class="title">{{ $title }}</h2>
 
-    @foreach ($menus as $menu)
-        <h2><a href="/menus/{{ $menu->slug }}">{{ $menu->name }}</a></h2>
-        <p>Category : <a href="/categories/{{ $menu->category->slug }}">{{ $menu->category->name_category }}</a></p>
-
-
-        <p>{{ $menu->description }}</p>
-        <a href="/menus/{{ $menu->slug }}">Detail Menu</a>
-    @endforeach
+    <div class="card-container">
+        @foreach ($menus as $menu)
+            <div class="card">
+                <img src="gambar-menu.jpg" alt="Gambar Menu" class="card-img">
+                <div class="card-body">
+                    <h4 class="card-title"><a href="/menus/{{ $menu->slug }}">{{ $menu->name }}</a></h4>
+                    <p class="card-category">Category :<a href="/categories/{{ $menu->category->slug }}">
+                            {{ $menu->category->name_category }}</a></p>
+                    <p class="card-description">{{ $menu->description }}</p>
+                    <p class="card-rating">Rating: {{ $menu->ratting }}</p>
+                    <p class="card-price">Rp.{{ $menu->price }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/menus/{{ $menu->slug }}" class="btn btn-primary">Detail Menu</a>
+                </div>
+            </div>
+        @endforeach
+    </div>
 @endsection
