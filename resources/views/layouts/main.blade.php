@@ -51,7 +51,7 @@
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MyProfile</a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Halo, </a>
+                                    <a class="dropdown-item" href="#!">Halo, {{ auth()->user()->name }}</a>
                                     <a class="dropdown-item" href="#!">My Order</a>
                                     <div class="dropdown-divider"></div>
                                     <form action="/logout" method="post">

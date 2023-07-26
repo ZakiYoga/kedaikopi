@@ -663,3 +663,49 @@ h6 {
 .btn:hover {
     background-color: #0056b3;
 }
+
+/* CSS untuk tampilan dropdown setelah login */
+/* Menghilangkan tombol login */
+.app-bar .btn-navbar .login {
+    display: none;
+}
+
+/* Menampilkan tombol dropdown setelah login */
+.app-bar .btn-navbar .dropdown-toggle {
+    display: inline-block;
+    cursor: pointer;
+    color: #C5A880;
+    background-color: #532E1C;
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+/* Styling dropdown menu */
+.app-bar .btn-navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 8vh;
+    right: 5%;
+    background-color: #532E1C;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.app-bar .btn-navbar .dropdown-menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #a07654;
+    border-bottom: 3px #a07654;
+}
+
+.app-bar .btn-navbar .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Menampilkan dropdown setelah tombol di klik */
+.app-bar .btn-navbar:hover .dropdown-menu {
+    display: block;
+}
