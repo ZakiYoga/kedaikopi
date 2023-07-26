@@ -20,9 +20,20 @@
             <li><a href="/">Order</a></li>
             <li><a href="/">About Us</a></li>
         </ul>
-    <ul class="btn-navbar">
-        {{-- <li><a class="signup" href="./component/page/login.php">Sign Up</a></li> --}}
-        <li><a class="login" href="./component/page/register.php">Login</a></li>
-    </ul>
+        <ul class="btn-navbar">
+            @auth
+                <li class="dropdown-toggle">
+                    <!-- Ganti 'Nama User' dengan nama pengguna yang sesuai setelah login -->
+                    Welcome Back, {{ auth()->user()->name }} <i class="fa-solid fa-caret-down"></i>
+                    <div class="dropdown-menu">
+                        <!-- Tambahkan menu-item untuk dashboard dan logout -->
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/logout">Logout</a>
+                    </div>
+                </li>
+            @else
+                <li><a class="login" href="/login">Login</a></li>
+            @endauth
+        </ul>
     </div>
 </header>
