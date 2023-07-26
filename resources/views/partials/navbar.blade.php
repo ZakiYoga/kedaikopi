@@ -22,12 +22,10 @@
         </ul>
         <ul class="btn-navbar">
             @auth
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown-toggle">
                 Welcome back, {{ auth()->user()->name }}
-                </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">My Dashboard</a></li>
+                    <li><a class="dropdown-item" href="/dashboard">My Dashboard</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Logout</a></li>
                 </ul>
@@ -35,7 +33,6 @@
             @else
             <li><a class="login" href="/login">Login</a></li>
             @endauth
-            {{-- <li><a class="signup" href="./component/page/login.php">Sign Up</a></li> --}}
         </ul>
     </div>
 </header>
