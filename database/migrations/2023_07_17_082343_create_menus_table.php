@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('category_id');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->text('description');
-            $table->enum('type_menu', ['Food', 'Drink']);
+            $table->enum('type_menu', ['Food', 'Beverage']);
             $table->double('price');
             $table->string('ratting');
             $table->timestamps();

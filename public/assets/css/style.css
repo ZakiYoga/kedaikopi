@@ -197,10 +197,28 @@ body {
 }
 
 .hero-content h2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding-left: 10px;
     font-family: 'Rock Salt', cursive;
     font-size: 3rem;
     color: #fff;
+}
+
+.letter {
+    transition: 0.4s;
+    transform: translateX(0);
+    cursor: grab;
+    color: #ffffff;
+    padding: 2px 2px;
+}
+
+.letter:hover {
+    transform: translateY(-1rem);
+    background: -webkit-linear-gradient(120deg, #c5a880, #a07654);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
@@ -226,7 +244,18 @@ body {
     background-size: cover;
     border: 1px solid var(--accent-color);
     box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.7);
+}
+
+#img1,
+#img2,
+#img3 {
     transition-duration: 0.5s;
+}
+
+#img1:hover,
+#img2:hover,
+#img3:hover {
+    transform: scale(1.05);
 }
 
 .hero-img-1 {
@@ -244,12 +273,6 @@ body {
     background-image: url('../img/img-3.jpg');
 }
 
-.hero-img-1:hover,
-.hero-img-2:hover,
-.hero-img-3:hover {
-    transform: scale(1.05);
-}
-
 .hero-content button {
     font-size: 1.5rem;
     margin-top: 20px;
@@ -259,6 +282,11 @@ body {
     border-radius: 4px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+.container-about-nemu {
+    background-image: url('../img/background.png');
+    background-size: 0;
 }
 
 .section-menu {
@@ -549,4 +577,89 @@ h6 {
 .copyright a {
     text-decoration: none;
     color: #C5A880;
+}
+
+.carousel-inner {
+    max-height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    margin: 30px 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.card-title a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.card-category {
+    display: block;
+    margin-top: 5px;
+}
+
+.card-category a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card-description {
+    margin-top: 10px;
+}
+
+.card-price {
+    font-weight: bold;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.card-rating {
+    margin-top: 5px;
+}
+
+.card-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }

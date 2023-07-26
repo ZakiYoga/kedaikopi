@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Menu;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Model
 {
@@ -11,7 +12,7 @@ class Category extends Model
 
     protected $guarded = ['id'];
 
-    public function Menus(){
+    public function menus(){
         return $this->hasMany(Menu::class);
     }
 }

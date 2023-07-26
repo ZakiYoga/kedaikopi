@@ -54,5 +54,35 @@ class DatabaseSeeder extends Seeder
             'ratting' => 'Sangat Memuaskan',
             'slug'=> 'detail'
         ]);
+
+        Menu::create([
+            'name' => 'Roti Bakar Keju',
+            'category_id' => 1,
+            'description' => 'Roti bakar dengan taburan keju yang leleh.',
+            'type_menu' => 'Food',
+            'price' => 15000,
+            'ratting' => 'Luar Biasa',
+            'slug'=> 'roti-bakar-keju'
+        ]);
+
+        Menu::create([
+            'name' => 'Nasi Goreng Spesial',
+            'category_id' => 2,
+            'description' => 'Nasi goreng spesial dengan telur, daging ayam, udang, dan sayuran.',
+            'type_menu' => 'Food',
+            'price' => 28000,
+            'ratting' => 'Enak',
+            'slug'=> 'nasi-goreng-spesial'
+        ]);
+
+        Menu::create([
+            'name' => 'Espresso',
+            'category_id' => 3,
+            'description' => 'Kopi espresso dengan aroma dan rasa yang khas.',
+            'type_menu' => 'Beverage',
+            'price' => 18000,
+            'ratting' => 'Sangat Memuaskan',
+            'slug'=> 'espresso'
+        ]);
     }
 }
