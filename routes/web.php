@@ -1,7 +1,7 @@
 <?php
+use App\Models\Category;
 
 use App\Models\Menu;
-use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LoginController;
@@ -55,7 +55,10 @@ Route::get('/dashboard', function () {
 }); 
 
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/categories', function(){
     return view('categories', [
@@ -64,11 +67,4 @@ Route::get('/categories', function(){
     ]);
 });
 
-Route::get('/categories/{category:slug}', function(Category $category){
-    return view('menu', [
-        'title' => "Category : $category->name_category",
-        'menus' => $category->menus,
-    ]);
-});
-
-Route::get('/admin', [DashboardController::class, 'index']);
+Route::get('/dashboard-admin', [DashboardController::class, 'index']);

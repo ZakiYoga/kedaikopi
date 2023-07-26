@@ -20,9 +20,9 @@
             <li><a href="/">Order</a></li>
             <li><a href="/">About Us</a></li>
         </ul>
-        <ul class="btn-navbar">
-            {{-- <li><a class="signup" href="./component/page/login.php">Sign Up</a></li> --}}
-            <li><a class="login" href="./component/page/register.php">Login</a></li>
-        </ul>
+    <ul class="btn-navbar">
+        {{-- <li><a class="signup" href="./component/page/login.php">Sign Up</a></li> --}}
+        <li><a class="login" href="./component/page/register.php">Login</a></li>
+    </ul>
     </div>
 </header>
