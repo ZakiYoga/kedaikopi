@@ -27,11 +27,17 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/dashboard">My Dashboard</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                    <li>
+                        <form action="/logout" method="post" class="dropdown-item">
+                            @csrf
+                            <button type="submit" id="logout">Logout</button>
+                        </form>
                 </ul>
             </li>
             @else
-            <li><a class="login" href="/login">Login</a></li>
+            <li class="nav-item">
+                <a class="login" href="/login">Login</a>
+            </li>
             @endauth
         </ul>
     </div>
