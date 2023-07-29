@@ -19,4 +19,6 @@
             </div>
         </div>
     </div>
+
+    <a href="/dashboard-admin/menus" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Back To All Menu</a>
 @endsection

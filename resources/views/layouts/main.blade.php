@@ -11,16 +11,17 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon-->
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="{{ URL::asset('assets/img/favicon.svg') }}" type="image/svg+xml">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link rel="stylesheet" href="./assets/css/styles-main.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/styles-main.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
 </head>
 
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
-        @include('layouts.sidebar')
+        @includeWhen($userRole === 'admin', 'layouts.sidebar-admin', ['active' => $active])
+        @includeWhen($userRole === 'user', 'layouts.sidebar', ['active' => $active])
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
@@ -39,7 +40,7 @@
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MyProfile</a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Halo,</a>
+                                    <a class="dropdown-item" href="#!">Profile</a>
                                     <a class="dropdown-item" href="#!">My Order</a>
                                     <div class="dropdown-divider"></div>
                                     <form action="/logout" method="post">
@@ -63,7 +64,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="./assets/js/scripts.js"></script>
+    <script src="{{ URL::asset('assets/js/scripts.js') }}"></script>
 </body>
 
 </html>

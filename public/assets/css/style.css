@@ -725,32 +725,36 @@ h6 {
 }
 
 /* Styling dropdown menu */
-.app-bar .btn-navbar .dropdown-menu {
+.dropdown-menu {
     display: none;
     position: absolute;
     top: 8vh;
     right: 5%;
     background-color: #532E1C;
-    padding: 10px;
+    color: #fff;
+    padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.app-bar .btn-navbar .dropdown-menu a,
+.dropdown-menu li a,
 #logout {
+    font-family: 'Roboto', sans-serif;
     display: block;
     padding: 5px 10px;
     text-decoration: none;
     color: #a07654;
     border-bottom: 3px #a07654;
+    width: 100%;
+    font-size: 1rem;
+    background-color: transparent;
 }
+
+
 
 .dropdown-item button {
     border: 0;
-    background-color: transparent;
-    padding: 5px 10px;
-    font-size: 1rems;
 }
 
 .app-bar .btn-navbar .dropdown-menu a:hover,

@@ -12,8 +12,12 @@ class DashboardMenuController extends Controller
      */
     public function index()
     {
+        $userRole = auth()->user()->role;
          return view('dashboard-admin.menus.index',[
-            "title" => "Dashboard Admin",
+            "userRole" => $userRole,
+            "title" => "All Menu",
+            "active" => 'dashboard',
+            "menus" => Menu::all(),
          ]);
     }
 
@@ -38,7 +42,15 @@ class DashboardMenuController extends Controller
      */
     public function show(Menu $menu)
     {
-        //
+        $userRole = auth()->user()->role;
+
+        return view('dashboard-admin.menus.show',[
+            "userRole" => $userRole,
+            "title" => $menu->name,
+            "active" => 'menu',
+            "menu" => $menu,
+            
+        ]);
     }
 
     /**

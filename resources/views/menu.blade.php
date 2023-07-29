@@ -5,6 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form action="/menus">
+                @if (request('category'))
+                    <input type="hidden" name="category" value="{{ request('category') }}">
+                @endif
+
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search Menu" name="search"
                         value="{{ request('search') }}">
@@ -20,7 +24,7 @@
                     <img src="gambar-menu.jpg" alt="Gambar Menu" class="card-img">
                     <div class="card-body">
                         <h4 class="card-title"><a href="/menus/{{ $menu->slug }}">{{ $menu->name }}</a></h4>
-                        <p class="card-category">Category :<a href="/categories/{{ $menu->category->slug }}">
+                        <p class="card-category">Category :<a href="/menus?category={{ $menu->category->slug }}">
                                 {{ $menu->category->name_category }}</a></p>
                         <p class="card-description">{{ $menu->description }}</p>
                         <p class="card-rating">Rating: {{ $menu->ratting }}</p>
@@ -31,8 +35,11 @@
                     </div>
                 </div>
             @endforeach
+        @else
+            <p class="text-center fs-4 w-100">Menu {{ request('search') }} Not Found</p>
+        @endif
     </div>
-@else
-    <p class="text-center fs-4">Menu {{ request('search') }} Not Found</p>
-    @endif
+    <div class="d-flex justify-content-center">
+        {{ $menus->links() }}
+    </div>
 @endsection

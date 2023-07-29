@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-about-menu">
+        <div class="container-about-menu" id="about">
             <div class="container-about">
                 <div class="about-img" data-aos="slide-right" data-aos-duration="4000">
                     <img src="assets/img/about.png" alt="about">
@@ -62,7 +62,8 @@
                     <button>Read More</button>
                 </div>
             </div>
-            <div class="section-menu">
+
+            <div class="section-menu" id="menu">
                 <div class="title-menu">
                     <h2>Favorite Menu</h2>
                 </div>
@@ -87,7 +88,8 @@
             </div>
         </div>
         </div>
-        <div class="container-faq">
+
+        <div class="container-faq" id="faq">
             <div class="faq">
                 <h6 data-aos="fade-down" data-aos-duration="4000">FAQ</h6>
                 <h1 data-aos="fade-down" data-aos-duration="4000">Frequently Asked Questuons</h1>
