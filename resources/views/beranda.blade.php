@@ -69,24 +69,28 @@
                 <div class="card-container">
                     @foreach ($menus as $menu)
                         <div class="card">
-                            <a class="card-title" href="/menus/{{ $menu->id }}">{{ $menu->name }}</a>
-                            <p class="card-category">Category : {{ $menu->category->name_category }}</p>
-                            <p class="card-description">{{ $menu->description }}</p>
-                            <p class="card-price">Harga: {{ $menu->price }}</p>
-                            <p class="card-rating">Rating: {{ $menu->ratting }}</p>
-                            <div class="card-buttons">
-                                <a class="btn btn-primary" href="/menus/{{ $menu->id }}">Detail Menu</a>
+                            <img src="{{ $menu->image }}" alt="Gambar Menu" class="card-img">
+                            <div class="card-body">
+                                <h4 class="card-title"><a href="/menus/{{ $menu->slug }}">{{ $menu->name }}</a></h4>
+                                <p class="card-category">Category :<a href="/categories/{{ $menu->category->slug }}">
+                                        {{ $menu->category->name_category }}</a></p>
+                                <p class="card-description">{{ $menu->description }}</p>
+                                <p class="card-rating">Rating: {{ $menu->ratting }}</p>
+                                <p class="card-price">Rp.{{ $menu->price }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/menus/{{ $menu->slug }}" class="btn btn-primary">Detail Menu</a>
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
+        </div>
         <div class="container-faq">
             <div class="faq">
                 <h6 data-aos="fade-down" data-aos-duration="4000">FAQ</h6>
                 <h1 data-aos="fade-down" data-aos-duration="4000">Frequently Asked Questuons</h1>
-                <hr data-aos="fade-right" data-aos-duration="3500">
                 <p data-aos="fade-in" data-aos-duration="3000">Temukan Jawaban untuk Pertanyaan Umum Anda</p>
             </div>
             <div class="questions-faq">

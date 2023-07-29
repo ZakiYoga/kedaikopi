@@ -1,5 +1,4 @@
 <?php
-use App\Http\Controllers\DashboardMenuController;
 use App\Models\Category;
 
 use App\Models\Menu;
@@ -7,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardMenuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +23,7 @@ Route::get('/', function () {
 
     return view('beranda', [
         "title" => "beranda",
+        "active" => 'beranda',
         "menus" => $menus
     ]);
 });
@@ -33,13 +33,15 @@ Route::get('/menus/{menu:slug}', [MenuController::class, 'show']);
 
 Route::get('/order', function () {
     return view('order', [
-        "title" => "Order"
+        "title" => "Order",
+        "active" => 'order',
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
-        "title" => "About"
+        "title" => "About",
+        "active" => 'about'
     ]);
 });
 
@@ -51,9 +53,10 @@ Route::get('/dashboard-coba', function () {
 
 Route::get('/dashboard', function () {
     return view('/dashboard', [
-        "title" => "Dashboard"
+        "title" => "Dashboard",
+        "active" => 'dashboard'
     ]);
-}); 
+})->middleware('auth'); 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -63,10 +66,22 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/categories', function(){
+    $categories = App\Models\Category::all();
+
     return view('categories', [
-        'title' =>'Kategori Menu',
-        'Categories' => Category::all()
+        'title' => 'Kategori Menu',
+        'active' => 'category',
+        'categories' => $categories,
     ]);
 });
 
-Route::get('/dashboard-admin', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::get('/categories/{category:slug}', function(Category $category){
+    return view('menu', [
+        'title' => "Category : $category->name_category",
+        'active' => 'categories',
+        'menus' => $category->menus,
+    ]);
+});
+
+Route::resource('/dashboard/admin', DashboardMenuController::class)->middleware('auth');

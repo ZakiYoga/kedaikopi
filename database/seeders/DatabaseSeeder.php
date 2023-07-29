@@ -48,40 +48,44 @@ class DatabaseSeeder extends Seeder
         Menu::create([
             'name' => 'Grilled Chicken Burger',
             'category_id' => 1,
+            'image' => 'storage\menu-image\burger-with-mayonnaise-sauce-it.jpg',
             'description' => 'Burger ayam panggang dengan keju, selada, tomat, dan saus mayo.',
             'type_menu' => 'Food',
             'price' => 24000,
             'ratting' => 'Sangat Memuaskan',
-            'slug'=> 'detail'
+            'slug'=> 'Grilled-chicken-burger'
         ]);
 
         Menu::create([
             'name' => 'Roti Bakar Keju',
             'category_id' => 1,
+            'image' => 'storage\menu-image\grilled-sandwich-rustic-bread-ready-eat-generated-by-ai.jpg',
             'description' => 'Roti bakar dengan taburan keju yang leleh.',
             'type_menu' => 'Food',
             'price' => 15000,
-            'ratting' => 'Luar Biasa',
+            'ratting' => 'Sangat Memuaskan',
             'slug'=> 'roti-bakar-keju'
         ]);
 
         Menu::create([
             'name' => 'Nasi Goreng Spesial',
             'category_id' => 2,
+            'image' => 'storage\menu-image\gourmet-meal-rustic-wood-table-indoors-generated-by-ai.jpg',
             'description' => 'Nasi goreng spesial dengan telur, daging ayam, udang, dan sayuran.',
             'type_menu' => 'Food',
             'price' => 28000,
-            'ratting' => 'Enak',
+            'ratting' => 'Sangat Memuaskan',
             'slug'=> 'nasi-goreng-spesial'
         ]);
 
         Menu::create([
             'name' => 'Espresso',
             'category_id' => 3,
+            'image' => 'storage\menu-image\burger-with-mayonnaise-sauce-it.jpg',
             'description' => 'Kopi espresso dengan aroma dan rasa yang khas.',
             'type_menu' => 'Beverage',
             'price' => 18000,
-            'ratting' => 'Sangat Memuaskan',
+            'ratting' => 'Enak',
             'slug'=> 'espresso'
         ]);
     }

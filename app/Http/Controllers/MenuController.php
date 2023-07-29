@@ -7,16 +7,18 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function index(){
+    public function index(){        
         return view('menu', [
             "title" => "Menu Foods And Beverages",
-            "menus" => Menu::all()
+            "active" => 'menu',
+            "menus" => Menu::with(['category'])->filter(request(['search', 'category']))->get(),
         ]);
     }
 
     public function show(Menu $menu){
-        return view('menu-detail', [
+        return view('menu_detail', [
             "title" => $menu->name,
+            "active" => 'menu',
             "menu" => $menu
         ]);
     }
